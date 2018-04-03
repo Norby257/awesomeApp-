@@ -24,10 +24,12 @@ app.engine(
 app.set("view engine", "handlebars")
 
 // Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+//  this is an IDENTICAL PATTERN to what we did with PORT 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/productZone";
 
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
+
 mongoose.connect(MONGODB_URI, {
   // useMongoClient: true
 });
